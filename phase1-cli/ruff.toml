@@ -1,0 +1,38 @@
+line-length = 100
+target-version = "py313"
+
+[lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "W",   # pycodestyle warnings
+    "B",   # flake8-bugbear
+    "C90", # mccabe complexity
+    "D",   # pydocstyle
+]
+ignore = [
+    "D203",  # one-blank-line-before-class (conflicts with D211)
+    "D213",  # multi-line-summary-second-line (conflicts with D212)
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["D"]
+"__init__.py" = ["D104"]
+"**/conftest.py" = ["D"]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.isort]
+known-first-party = ["todo_app"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
