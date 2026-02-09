@@ -19,6 +19,8 @@ dependencies = [
     "click>=8.1.0",
     "rich>=13.0.0",
     "pydantic>=2.5.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
 ]
 
 [project.optional-dependencies]
@@ -31,6 +33,7 @@ dev = [
 
 [project.scripts]
 todo = "todo_app.infrastructure.cli.app:main"
+todo-api = "todo_app.api.server:run"
 
 [build-system]
 requires = ["setuptools>=68.0"]
