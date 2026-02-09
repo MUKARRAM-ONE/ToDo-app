@@ -1,0 +1,23 @@
+project_name: Todo-app Phase II
+version: 2.0.0
+description: Full-stack web application with Next.js and FastAPI
+
+structure:
+  frontend:
+    path: ./frontend
+    tech: Next.js 16+, TypeScript, Tailwind CSS
+  backend:
+    path: ./backend
+    tech: FastAPI, Python 3.13+, SQLModel
+  database:
+    path: ./specs/database
+    tech: Neon PostgreSQL
+
+governance:
+  constitution: ./specs/constitution.md
+  spec_path: ./specs/features
+  adr_path: ./history/adr
+
+agents:
+  primary: gemini
+  guidance: .specify/memory/constitution.md
